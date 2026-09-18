@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            background:
+                linear-gradient(rgba(10, 15, 20, 0.72), rgba(10, 15, 20, 0.9)),
+                url("https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/NewKeyArt_Header.jpg") center/cover fixed;
+        }
+
+        main {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        .descripcion {
+            margin: 10px 0 35px;
+            color: #ddd;
+        }
+
+        .opciones {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .opcion {
+            flex: 1;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(20, 20, 25, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .opcion h2 {
+            margin-top: 0;
+            font-size: 25px;
+        }
+
+        .opcion p {
+            color: #bbb;
+            line-height: 1.5;
+            min-height: 45px;
+        }
+
+        .juegos {
+            border-top: 4px solid #e34b3f;
+        }
+
+        .musica {
+            border-top: 4px solid #e4588b;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .juegos .boton {
+            background-color: #b93227;
+        }
+
+        .musica .boton {
+            background-color: #a83d68;
+        }
+
+        .boton:hover {
+            opacity: 0.85;
+        }
+
+        .pie {
+            margin-top: 30px;
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+            .opciones {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Inicio</h1>
+
+        <p class="descripcion">Páginas de juegos y música</p>
+
+        <section class="opciones">
+
+            <article class="opcion juegos">
+                <h2>🎮 Juegos</h2>
+                <p>Videojuegos y una lista de juegos</p>
+                <a class="boton" href="/juegos/">Entrar</a>
+            </article>
+
+            <article class="opcion musica">
+                <h2>♫ Música</h2>
+                <p>Canciones y lista musical</p>
+                <a class="boton" href="/musica/">Entrar</a>
+            </article>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
