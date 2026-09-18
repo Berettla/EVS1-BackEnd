@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #17191c;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 45px;
+            background-color: #0f1012;
+            border-bottom: 2px solid #30343a;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        nav a {
+            color: #bbb;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1150px;
+            margin: 35px auto;
+        }
+
+        .destacado {
+            display: flex;
+            min-height: 360px;
+            background-color: #24282d;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .destacado img {
+            width: 55%;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info h2 {
+            font-size: 38px;
+            margin: 0 0 12px 0;
+        }
+
+        .info p {
+            color: #b9b9b9;
+            line-height: 1.6;
+        }
+
+        .boton {
+            width: fit-content;
+            margin-top: 15px;
+            padding: 11px 18px;
+            background-color: #e34b3f;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .boton:hover {
+            background-color: #c93d32;
+        }
+
+        .titulo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .titulo h2 {
+            margin: 0;
+        }
+
+        .juegos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .juego {
+            background-color: #24282d;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .juego img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .juego-info {
+            padding: 18px;
+        }
+
+        .juego-info h3 {
+            margin: 0 0 8px 0;
+        }
+
+        .juego-info p {
+            margin: 0;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .pie {
+            margin-top: 40px;
+            padding: 20px 0;
+            color: #777;
+            border-top: 1px solid #30343a;
+            text-align: center;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                padding: 18px 25px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                margin-top: 12px;
+            }
+
+            nav a {
+                margin: 0 20px 0 0;
+            }
+
+            .destacado {
+                flex-direction: column;
+            }
+
+            .destacado img {
+                width: 100%;
+                height: 250px;
+            }
+
+            .juegos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎮 Juegos</h1>
+
+        <nav>
+            <a href="/juegos/">Inicio</a>
+            <a href="/juegos/lista/">Lista de juegos</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destacado">
+            <img src="https://cdn.akamai.steamstatic.com/steam/apps/379720/header.jpg" alt="DOOM">
+
+            <div class="info">
+                <h2>DOOM</h2>
+
+                <p>
+                    Un juego de acción y disparos en primera persona.
+                    Aquí puedes conocer algunos juegos y revisar la lista completa.
+                </p>
+
+                <a class="boton" href="/juegos/lista/">
+                    Ver lista completa
+                </a>
+            </div>
+
+        </section>
+
+        <div class="titulo">
+            <h2>Otros juegos</h2>
+        </div>
+
+        <section class="juegos">
+
+            <article class="juego">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/620/header.jpg" alt="Portal 2">
+
+                <div class="juego-info">
+                    <h3>Portal 2</h3>
+                    <p>Puzles, plataformas y mucha física.</p>
+                </div>
+            </article>
+
+            <article class="juego">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/367520/header.jpg"alt="Hollow Knight">
+
+                <div class="juego-info">
+                    <h3>Hollow Knight</h3>
+                    <p>Aventura y exploración en un mundo subterráneo.</p>
+                </div>
+            </article>
+
+            <article class="juego">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/105600/header.jpg" alt="Terraria">
+
+                <div class="juego-info">
+                    <h3>Terraria</h3>
+                    <p>Exploración, construcción y supervivencia.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
