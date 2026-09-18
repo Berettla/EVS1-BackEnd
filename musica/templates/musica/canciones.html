@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #17151c;
+            color: white;
+        }
+
+        .contenedor {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 230px;
+            min-height: 100vh;
+            background-color: #21172a;
+            padding: 30px 22px;
+            box-sizing: border-box;
+            border-right: 2px solid #6d3d75;
+            box-shadow: 4px 0 12px rgba(0, 0, 0, 0.25);
+        }
+
+        aside h1 {
+            margin: 0 0 45px 0;
+            font-size: 28px;
+            color: #e4588b;
+        }
+
+        aside p {
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        aside a {
+            display: block;
+            padding: 13px 12px;
+            margin-bottom: 8px;
+            color: #b9adbf;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        aside a:hover {
+            background-color: #35223f;
+            color: white;
+        }
+
+        .contenido {
+            flex: 1;
+            max-width: 1000px;
+            padding: 40px 55px;
+            margin: 0 auto;
+        }
+
+        .encabezado {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 30px;
+        }
+
+        .encabezado h2 {
+            margin: 0 0 8px 0;
+            font-size: 32px;
+        }
+
+        .encabezado p {
+            margin: 0;
+            color: #89838e;
+        }
+
+        .contador {
+            color: #e4588b;
+            font-size: 14px;
+        }
+
+        .lista {
+            background-color: #201d25;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .fila {
+            display: grid;
+            grid-template-columns: 35px 65px 1fr 150px 70px;
+            align-items: center;
+            gap: 15px;
+            padding: 12px 18px;
+            border-bottom: 1px solid #302c35;
+        }
+
+        .fila:last-child {
+            border-bottom: none;
+        }
+
+        .fila:hover {
+            background-color: #29252f;
+        }
+
+        .numero {
+            color: #777;
+            text-align: center;
+        }
+
+        .portada {
+            width: 65px;
+            height: 65px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .una {
+            background: linear-gradient(135deg, #1f2025, #aaa);
+        }
+
+        .dos {
+            background: linear-gradient(135deg, #5b2028, #dd6b5d);
+        }
+
+        .tres {
+            background: linear-gradient(135deg, #27202e, #a24d8f);
+        }
+
+        .cuatro {
+            background: linear-gradient(135deg, #24364b, #63a5c7);
+        }
+
+        .cinco {
+            background: linear-gradient(135deg, #342344, #8c5bb0);
+        }
+
+        .cancion-info h3 {
+            margin: 0 0 6px 0;
+            font-size: 16px;
+        }
+
+        .cancion-info p {
+            margin: 0;
+            color: #888;
+            font-size: 13px;
+        }
+
+        .album {
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        .duracion {
+            color: #777;
+            text-align: right;
+            font-size: 13px;
+        }
+
+        .pie {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #302c38;
+            color: #666;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            aside {
+                width: 190px;
+            }
+
+            .contenido {
+                padding: 30px;
+            }
+
+            .fila {
+                grid-template-columns: 30px 55px 1fr 60px;
+            }
+
+            .album {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contenedor {
+                display: block;
+            }
+
+            aside {
+                width: 100%;
+                min-height: auto;
+                border-right: 0;
+                border-bottom: 2px solid #6d3d75;
+            }
+
+            .fila {
+                grid-template-columns: 25px 55px 1fr 55px;
+            }
+
+            .portada {
+                width: 55px;
+                height: 55px;
+            }
+
+            .contenido {
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <aside>
+            <h1>♫ Música</h1>
+
+            <p>MENÚ</p>
+
+            <a href="/musica/">Inicio</a>
+            <a href="/musica/canciones/">Canciones</a>
+        </aside>
+
+        <main class="contenido">
+
+            <div class="encabezado">
+                <div>
+                    <h2>Canciones</h2>
+                    <p>Una selección de canciones para escuchar.</p>
+                </div>
+
+                <span class="contador">5 canciones</span>
+            </div>
+
+            <section class="lista">
+
+                <div class="fila">
+                    <span class="numero">01</span>
+                    <div class="portada una">♫</div>
+
+                    <div class="cancion-info">
+                        <h3>Do I Wanna Know?</h3>
+                        <p>Arctic Monkeys</p>
+                    </div>
+
+                    <span class="album">AM</span>
+                    <span class="duracion">4:32</span>
+                </div>
+
+                <div class="fila">
+                    <span class="numero">02</span>
+                    <div class="portada dos">♫</div>
+
+                    <div class="cancion-info">
+                        <h3>Blinding Lights</h3>
+                        <p>The Weeknd</p>
+                    </div>
+
+                    <span class="album">After Hours</span>
+                    <span class="duracion">3:20</span>
+                </div>
+
+                <div class="fila">
+                    <span class="numero">03</span>
+                    <div class="portada tres">♫</div>
+
+                    <div class="cancion-info">
+                        <h3>Somebody Else</h3>
+                        <p>The 1975</p>
+                    </div>
+
+                    <span class="album">I Like It When You Sleep</span>
+                    <span class="duracion">5:47</span>
+                </div>
+
+                <div class="fila">
+                    <span class="numero">04</span>
+                    <div class="portada cuatro">♫</div>
+
+                    <div class="cancion-info">
+                        <h3>Instant Crush</h3>
+                        <p>Daft Punk</p>
+                    </div>
+
+                    <span class="album">Random Access Memories</span>
+                    <span class="duracion">5:37</span>
+                </div>
+
+                <div class="fila">
+                    <span class="numero">05</span>
+                    <div class="portada cinco">♫</div>
+
+                    <div class="cancion-info">
+                        <h3>505</h3>
+                        <p>Arctic Monkeys</p>
+                    </div>
+
+                    <span class="album">Favourite Worst Nightmare</span>
+                    <span class="duracion">4:13</span>
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+
+</body>
+</html>
