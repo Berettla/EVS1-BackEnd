@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Música</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #17151c;
+            color: white;
+        }
+
+        .contenedor {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        aside {
+            width: 230px;
+            min-height: 100vh;
+            background-color: #21172a;
+            padding: 30px 22px;
+            box-sizing: border-box;
+            border-right: 2px solid #6d3d75;
+            box-shadow: 4px 0 12px rgba(0, 0, 0, 0.25);
+        }
+
+        aside h1 {
+            margin: 0 0 45px 0;
+            font-size: 28px;
+            color: #e4588b;
+        }
+
+        aside p {
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        aside a {
+            display: block;
+            padding: 13px 12px;
+            margin-bottom: 8px;
+            color: #b9adbF;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        aside a:hover {
+            background-color: #35223f;
+            color: white;
+        }
+
+        .contenido {
+            flex: 1;
+            padding: 40px 55px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .contenido h2 {
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        .reproductor {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            background: linear-gradient(135deg, #36203f, #542650);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 25px auto 40px auto;
+        }
+
+        .portada {
+            width: 170px;
+            height: 170px;
+            background: linear-gradient(135deg, #e4588b, #7b3f8c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .reproductor h3 {
+            margin: 0 0 8px 0;
+            font-size: 25px;
+        }
+
+        .reproductor p {
+            margin: 0;
+            color: #d0c7d2;
+        }
+
+        .barra {
+            width: 100%;
+            height: 4px;
+            background-color: #78536f;
+            margin: 25px 0 12px 0;
+            border-radius: 5px;
+        }
+
+        .tiempo {
+            display: flex;
+            justify-content: space-between;
+            color: #aaa;
+            font-size: 12px;
+        }
+
+        .controles {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .titulo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .titulo h2 {
+            font-size: 21px;
+        }
+
+        .titulo a {
+            color: #e4588b;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .cancion {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #2b2830;
+        }
+
+        .numero {
+            width: 35px;
+            color: #777;
+            text-align: center;
+        }
+
+        .mini-portada {
+            width: 55px;
+            height: 55px;
+            margin: 0 15px;
+            background-color: #382d43;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            font-size: 23px;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info h3 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+        }
+
+        .info p {
+            margin: 0;
+            color: #888;
+            font-size: 13px;
+        }
+
+        .play {
+            color: #e4588b;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .cancion:hover {
+            background-color: #211e26;
+            border-radius: 6px;
+        }
+
+        .pie {
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #302c38;
+            color: #666;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+            .contenedor {
+                display: block;
+            }
+
+            aside {
+                width: 100%;
+                border-right: 0;
+                border-bottom: 1px solid #302c38;
+            }
+
+            aside h1 {
+                margin-bottom: 15px;
+            }
+
+            .contenido {
+                padding: 25px;
+            }
+
+            .reproductor {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .portada {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <aside>
+            <h1>♫ Música</h1>
+
+            <p>MENÚ</p>
+
+            <a href="/musica/">Inicio</a>
+            <a href="/musica/canciones/">Canciones</a>
+        </aside>
+
+        <main class="contenido">
+
+            <h2>Tu música</h2>
+
+            <section class="reproductor">
+
+                <div class="portada">♫</div>
+
+                <div>
+                    <h3>Do I Wanna Know?</h3>
+                    <p>Arctic Monkeys</p>
+
+                    <div class="barra"></div>
+
+                    <div class="tiempo">
+                        <span>1:42</span>
+                        <span>4:32</span>
+                    </div>
+
+                    <div class="controles">◀ &nbsp; ▶ &nbsp; ▶</div>
+                </div>
+
+            </section>
+
+            <div class="titulo">
+                <h2>Escuchado recientemente</h2>
+                <a href="/musica/canciones/">Ver todas</a>
+            </div>
+
+            <section>
+
+                <div class="cancion">
+                    <span class="numero">01</span>
+                    <div class="mini-portada">🎸</div>
+
+                    <div class="info">
+                        <h3>Do I Wanna Know?</h3>
+                        <p>Arctic Monkeys · Rock</p>
+                    </div>
+
+                    <span class="play">▶</span>
+                </div>
+
+                <div class="cancion">
+                    <span class="numero">02</span>
+                    <div class="mini-portada">🎧</div>
+
+                    <div class="info">
+                        <h3>Blinding Lights</h3>
+                        <p>The Weeknd · Pop</p>
+                    </div>
+
+                    <span class="play">▶</span>
+                </div>
+
+                <div class="cancion">
+                    <span class="numero">03</span>
+                    <div class="mini-portada">🎤</div>
+
+                    <div class="info">
+                        <h3>Somebody Else</h3>
+                        <p>The 1975 · Indie</p>
+                    </div>
+
+                    <span class="play">▶</span>
+                </div>
+
+                <div class="cancion">
+                    <span class="numero">04</span>
+                    <div class="mini-portada">🎹</div>
+
+                    <div class="info">
+                        <h3>Instant Crush</h3>
+                        <p>Daft Punk · Electrónica</p>
+                    </div>
+
+                    <span class="play">▶</span>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
